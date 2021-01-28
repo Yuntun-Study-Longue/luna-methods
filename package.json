@@ -18,6 +18,22 @@
   },
   "homepage": "https://github.com/Yuntun-Study-Longue/luna-methods#readme",
   "dependencies": {
-    "ali-oss": "^6.1.1"
+    "@alicloud/pop-core": "^1.7.6",
+    "ali-oss": "^6.1.1",
+    "crypto": "^1.0.1",
+    "co": "^4.6.0",
+    "dot-object": "^1.7.1",
+    "md5": "^2.2.1",
+    "node-xlsx": "^0.15.0",
+    "shortid": "^2.2.14",
+    "tempfile": "^2.0.0",
+    "xml2js": "^0.4.19",
+    "bluebird": "^3.5.2",
+    "jsonwebtoken": "^8.5.1",
+    "request": "^2.88.0",
+    "superagent": "^3.8.3",
+    "lodash": "^4.17.11",
+    "execa": "^1.0.0",
+    "moment": "^2.24.0"
   }
 }

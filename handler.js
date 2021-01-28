@@ -7,7 +7,6 @@ const {
 } = require('./src/network');
 
 const {
-  handleGClientIP,
   handleRmLocal,
   handleLoadSourceByStream,
   handleUploadFile,
@@ -33,6 +32,7 @@ exports.register = function (server, options, next) {
   }
 
   // 工具库
+  const { wx_tpl } = require('../template');
   server.expose('utils', {
       alioss,
       co: require('co'),
@@ -43,6 +43,7 @@ exports.register = function (server, options, next) {
       request: require('request'),
       stream: require('stream'),
       Promise: require('bluebird'),
+      wxcompile: require('lodash').template(wx_tpl),
       tempfile: require('tempfile'),
       tmpdir: require('os').tmpdir,
       fs: require('fs'),
