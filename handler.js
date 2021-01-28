@@ -32,7 +32,7 @@ exports.register = function (server, options, next) {
   }
 
   // 工具库
-  const { wx_tpl } = require('../template');
+  const { wx_tpl } = require('./src/template');
   server.expose('utils', {
       alioss,
       co: require('co'),
