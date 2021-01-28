@@ -2,6 +2,7 @@ const {
   MAIN_ACCESS_KEY_ID, MAIN_ACCESS_KEY_SECRET
 } = process.env;
 const OSS= require('ali-oss');
+const AlipopCore = require('@alicloud/pop-core');
 const { 
   handleGClientIP
 } = require('./src/network');
@@ -30,6 +31,14 @@ exports.register = function (server, options, next) {
           bucket: 'yuntun-avatar',
       })
   }
+
+  const aliclient = override_option => new AlipopCore({
+    accessKeyId: process.env.MAIN_ACCESS_KEY_ID,
+    accessKeySecret: process.env.MAIN_ACCESS_KEY_SECRET,
+    endpoint: `https://facebody.cn-shanghai.aliyuncs.com`,
+    apiVersion: '2019-12-30',
+    ...override_option
+  });
 
   // 工具库
   const { wx_tpl } = require('./src/template');
