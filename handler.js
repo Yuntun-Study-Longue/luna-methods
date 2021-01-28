@@ -44,6 +44,7 @@ exports.register = function (server, options, next) {
   const { wx_tpl } = require('./src/template');
   server.expose('utils', {
       alioss,
+      aliclient,
       co: require('co'),
       superagent: require('superagent'),
       moment: require('moment'),
