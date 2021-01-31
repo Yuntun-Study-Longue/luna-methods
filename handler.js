@@ -67,13 +67,14 @@ exports.register = function (server, options, next) {
       JWT: require('jsonwebtoken'),
   });
 
+  const _this = server.plugins['luna-methods'];
   // network
-  server.method('GClientIP', handleGClientIP.bind(this));
+  server.method('GClientIP', handleGClientIP.bind(_this));
 
   // file upload
-  server.method('rmLocal', handleRmLocal.bind(this));
-  server.method('loadSourceByStream', handleLoadSourceByStream.bind(this));
-  server.method('uploadFile', handleUploadFile.bind(this))
+  server.method('rmLocal', handleRmLocal.bind(_this));
+  server.method('loadSourceByStream', handleLoadSourceByStream.bind(_this));
+  server.method('uploadFile', handleUploadFile.bind(_this))
 }
 exports.name = 'luna-methods';
 exports.multiple = false;
