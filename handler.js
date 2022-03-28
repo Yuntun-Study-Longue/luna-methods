@@ -65,7 +65,7 @@ exports.register = function (server, options, next) {
       md5: require('md5'),
       shortid: require('shortid'),
       JWT: require('jsonwebtoken'),
-      cpy: require('cpy'),
+      AdmZip: require('adm-zip'),
   });
 
   const _this = server.plugins['luna-methods'];
