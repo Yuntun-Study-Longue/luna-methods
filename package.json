@@ -4,7 +4,9 @@
   "description": "",
   "main": "handler.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "npm publish --registry http://182.92.218.109:9001/repository/npm-local/",
+    "login": "npm login --registry http://182.92.218.109:9001/repository/npm-local/"
   },
   "repository": {
     "type": "git",
