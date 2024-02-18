@@ -47,7 +47,6 @@ exports.register = function (server, options, next) {
       aliclient,
       co: require('co'),
       superagent: require('superagent'),
-      moment: require('moment'),
       crypto: require('crypto'),
       xml2js: require('xml2js'),
       request: require('request'),
@@ -66,6 +65,7 @@ exports.register = function (server, options, next) {
       shortid: require('shortid'),
       JWT: require('jsonwebtoken'),
       AdmZip: require('adm-zip'),
+      puppeteer: require('puppeteer'),
   });
 
   const _this = server.plugins['luna-methods'];
